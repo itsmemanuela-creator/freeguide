@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Your Free PDF Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="hero">
+        <h1>Download Your Free PDF Guide</h1>
+        <p>Transition to a simpler life now with my "10 Steps to a Simple Life" guide.</p>
+        <button onclick="showForm()">Get Instant Access</button>
+    </header>
+    
+    <section class="features">
+        <h2>What's Inside?</h2>
+        <ul>
+            <li>📘 10 steps to simplify your life now</li>
+            <li>✅ Practical tips for decluttering and prioritizing</li>
+            <li>✅ Mindset shifts for lasting change</li>
+            <li>✅ Free resources to help you take action</li>
+        </ul>
+    </section>
+    
+    <section class="form-section" id="form-section" style="display: none;">
+        <h2>Enter Your Email to Download</h2>
+        <form id="pdfForm">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <button type="submit">Download Now</button>
+        </form>
+        <p id="thankYouMessage" style="display: none; color: green;">Thank you! Your PDF is on its way.</p>
+        <p style="font-size: 0.9em; color: gray;">We respect your privacy. No spam, ever.</p>
+    </section>
+    
+    <script>
+        function showForm() {
+            document.getElementById("form-section").style.display = "block";
+        }
+        
+        document.getElementById("pdfForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            document.getElementById("thankYouMessage").style.display = "block";
+        });
+    </script>
+</body>
+</html>
